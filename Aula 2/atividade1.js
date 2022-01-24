@@ -13,7 +13,9 @@ class StringManipulations {
      * @param  {String} subStr  substring to be matched
      * @return {String}
      */
-    findFirstMatch(subStr) {}
+    findFirstMatch(subStr) {
+        return subStr.substring(0, 1);
+    }
 
 
     /**
@@ -21,7 +23,9 @@ class StringManipulations {
      * @param  {String} subStr  substring to be matched
      * @return {String}
      */
-    findLastMatch(subStr) {}
+    findLastMatch(subStr) {
+        return subStr.substring(subStr.length - 1);
+    }
 
     /**
      * Returns the fsubstring between two given other strings
@@ -29,7 +33,11 @@ class StringManipulations {
      * @param  {String} subStr2  ending of the match
      * @return {String}
      */
-    substringBetweenMatches(subStr1, subStr2) {}
+    substringBetweenMatches(subStr1, subStr2) {
+        let begin = this.string.indexOf(subStr1) + subStr1.length;
+        let end = this.string.indexOf(subStr2);
+        return this.string.substring(begin, end);
+    }
 
     /**
     Given the string attribute of the class, 
@@ -40,7 +48,9 @@ class StringManipulations {
     * @return {String}
     */
     both_ends() {
-
+        if (this.string.length < 2)
+            return "";
+        return this.string.substring(0, 2) + this.string.substring(this.string.length - 2, this.string.length);
     }
 
     /**
@@ -52,6 +62,11 @@ class StringManipulations {
     * @param  {String} str1  
     * @return {String}
     */
-    fix_start(str1) {}
+    fix_start(str1) {
+        let firstChar = str1.charAt(0);
+        return str1.replace(firstChar, "*");
+    }
 
 }
+
+module.exports = StringManipulations;
