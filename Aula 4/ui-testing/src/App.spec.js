@@ -4,7 +4,7 @@ describe('App Developers Skills', () => {
         cy.visit('http://localhost:3000/');
     });
 
-    it('Verify titles',()=>{
+    it('Verificando os titulos',()=>{
         cy.get('h1').should('have.text','Developers App')
         cy.get('.App > :nth-child(2)').should('have.text','Skill Name')
         cy.get('.App > :nth-child(4)').should('have.text','Developers')
@@ -12,7 +12,7 @@ describe('App Developers Skills', () => {
         cy.get('.App > :nth-child(8)').should('have.text','Roles')
     })
 
-    it('Verify texto fields',()=>{
+    it('verificando se os textos dos campos de textos',()=>{
         cy.get('.App > :nth-child(3)')
             .type('teste')
             .should('have.value','teste')
@@ -27,7 +27,7 @@ describe('App Developers Skills', () => {
             .should('have.value','teste')
     })
 
-    it('Click on Add Skill',()=>{
+    it('clicando no botão Add skill',()=>{
         cy.get('#load-skills-button').click()
     })
 });

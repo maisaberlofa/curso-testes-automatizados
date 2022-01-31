@@ -30,6 +30,9 @@
     "reporters": [
       "default",
       "jest-stare"
-    ]
+    ],
+    "mongodb": "^4.3.1",
+    "request-promise": "^4.2.6",
+    "supertest": "^6.2.1"
   }
 }

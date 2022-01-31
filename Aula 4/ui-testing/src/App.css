@@ -33,7 +33,7 @@ h1, li {
   color: white;
 }
 
-input.input1 {
+input.input {
   height:50px;
   font-size:14pt;
   padding: 0.35em 1.2em;
@@ -45,7 +45,7 @@ input.input1 {
   font-weight: 300;
 }
 
-a.button1 {
+a.btnAdd {
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #FFFFFF;
@@ -58,15 +58,16 @@ a.button1 {
   color: #FFFFFF;
   text-align: center;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
-a.button1:hover {
+a.btnAdd:hover {
   color: #000000;
   background-color: #FFFFFF;
 }
 
 @media all and (max-width:30em) {
-  a.button1 {
+  a.btnAdd {
     display: block;
     margin: 0.4em auto;
   }
